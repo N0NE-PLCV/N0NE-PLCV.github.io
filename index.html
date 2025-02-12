@@ -155,35 +155,7 @@
                 </div>
             </div>
             <div class="col-span-4 row-span-2 rounded-3xl bg-[#2a2b4f] shadow-lg transform transition-transform duration-300 hover:scale-105 flex items-center justify-center">
-                <div class="text-center">
-                    <h2 class="text-2xl font-bold mb-4">CountDown: Semester END</h2>
-                    <div class="grid auto-cols-max grid-flow-col gap-5 text-center">
-                        <div class="flex flex-col">
-                            <span class="countdown font-mono text-5xl">
-                                <span id="days"></span>
-                            </span>
-                            days
-                        </div>
-                        <div class="flex flex-col">
-                            <span class="countdown font-mono text-5xl">
-                                <span id="hours"></span>
-                            </span>
-                            hours
-                        </div>
-                        <div class="flex flex-col">
-                            <span class="countdown font-mono text-5xl">
-                                <span id="minutes"></span>
-                            </span>
-                            min
-                        </div>
-                        <div class="flex flex-col">
-                            <span class="countdown font-mono text-5xl">
-                                <span id="seconds"></span>
-                            </span>
-                            sec
-                        </div>
-                    </div>
-                </div>
+                <h2 class="text-2xl font-bold mb-4 text-center">There are currently no projects to display.</h2>
             </div>
             <div class="col-span-6 row-span-2 rounded-3xl bg-[#1a1b2f] shadow-lg transform transition-transform duration-300 hover:scale-105 flex items-center justify-center">
                 <div class="text-white">
@@ -225,40 +197,5 @@
             </div>
         </div>
     </div>
-    <script>
-        // Set the date we're counting down to
-        var countDownDate = new Date("Feb 24, 2025 23:59:59").getTime();
-        
-        // Update the count down every 1 second
-        var x = setInterval(function() {
-        
-            // Get today's date and time
-            var now = new Date().getTime();
-        
-            // Find the distance between now and the count down date
-            var distance = countDownDate - now;
-        
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-            // Display the result in the elements with id="days", id="hours", id="minutes", and id="seconds"
-            document.getElementById("days").innerHTML = days;
-            document.getElementById("hours").innerHTML = hours;
-            document.getElementById("minutes").innerHTML = minutes;
-            document.getElementById("seconds").innerHTML = seconds;
-        
-            // If the count down is over, write some text 
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("days").innerHTML = "0";
-                document.getElementById("hours").innerHTML = "0";
-                document.getElementById("minutes").innerHTML = "0";
-                document.getElementById("seconds").innerHTML = "0";
-            }
-        }, 1000);
-    </script>
 </body>
 </html>
